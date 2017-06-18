@@ -1,6 +1,7 @@
 # TaskListApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
+It is a to do list app made for practicing Angular 2.
 
 ## Development server
 
