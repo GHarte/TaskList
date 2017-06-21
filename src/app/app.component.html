@@ -1,6 +1,18 @@
-<!--The whole content below can be removed with the new code.-->
 <div class="container">
- <app-card></app-card>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="content-field" class="sr-only"></label>
+          <input type="text" class="form-control" id="content-field" placeholder="Enter a task...">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Task</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <app-card *ngFor="let task of tasks" [task]="task" class="col-sm-3"></app-card>
+    </div>
 </div>
 
 
