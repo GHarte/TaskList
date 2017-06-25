@@ -10,15 +10,31 @@ import { Task } from 'app/model/task';
 export class AppComponent {
   title = 'Task Cards';
 
-   tasks = [
+  private currentTask = new Task(null, false);
+  tasks = [
     new Task(
-      "Buy a monkey",
+      "Top up Leap Card",
       false
     ),
     new Task(
       "Get Lunch",
       false
+    ),
+    new Task(
+      "Buy an iMac",
+      false
+    ),
+    new Task(
+      "Charge Phone",
+      false
     )
   ]
+
+  addTask() {
+    let task = new Task(this.currentTask.content, this.currentTask.completed);
+    this.tasks.push(task)
+    this.currentTask.content = null;
+
+  }
 
 }
